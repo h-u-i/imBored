@@ -1,4 +1,5 @@
 class GroupsController < ApplicationController
+
 	def index
 		if current_user.nil?
 			flash[:error] = "You must be logged in to see groups."
@@ -8,6 +9,10 @@ class GroupsController < ApplicationController
 		end
 	end
 
+	def create
+
+	end
+	
 	def join
 		group = Group.find(params[:group_id])
 		if current_user
