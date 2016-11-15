@@ -1,0 +1,10 @@
+<h1>Create a new event!</h1>
+
+<%= simple_form_for @event, :url => {:action => "create"} do |f| %>
+    <%= f.input :name , placeholder: "Event name"%>
+    <%= f.input :description, placeholder: "Description"%>
+    <%= f.input :month, placeholder: "Month"%>
+    <%= f.input :day, placeholder: "Day" %>
+    <%= f.input :year, placeholder: "Year" %>
+    <%= f.button :submit %>
+<% end %>

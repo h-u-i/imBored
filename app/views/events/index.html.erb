@@ -1,0 +1,11 @@
+<h1> Events:</h1>
+<%= button_to "Create a new event", {action: "new"}, :class => "button medium", :method => :get %>
+<% @events.each do |event|%>
+    <b><%= event.name %>- </b>
+    <%= event.month %> <%= event.day %>, <%= event.year%>
+    <br>
+    <% if event.description.present?%>
+        &nbsp; &nbsp; &nbsp; <%= event.description%>
+    <br>
+    <%end%>
+<% end%>
