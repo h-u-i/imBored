@@ -1,20 +1,24 @@
 <div class="group-item">
-	<%= group.name %>
-	<%= group.description %>
-	<ul>
-		<% group.users.each do |user| %>
-			<li> <%= user.name %> </li>
+	<div id="side" class="col-md-2">
+		<% if not group.users.include? current_user %>
+		 	<%= button_to join_group_path(:group_id => group.id), :class=> "btn btn-success", :method => :patch do %>
+		 		<div>Join Group</div>
+		 		<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+		 	<% end %>
+		<% else %>
+			<%= button_to leave_group_path(:group_id => group.id), :class=> "btn btn-danger", :method => :delete do %>
+				<div>Leave Group</div>
+		 		<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+		 	<% end %>
 		<% end %>
-	</ul>
-	<% if not group.users.include? current_user %>
-	 	<%= button_to join_group_path(:group_id => group.id), :class=> "btn btn-success", :method => :patch do %>
-	 		<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-	 		 Join Group
-	 	<% end %>
-	<% else %>
-		<%= button_to leave_group_path(:group_id => group.id), :class=> "btn btn-danger", :method => :delete do %>
-	 		<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-	 		 Leave Group
-	 	<% end %>
-	<% end %>
+	</div>
+	<div class="col-md-10"> 
+		<h3 id="group-title"><%= group.name %></h3>
+		<div><%= group.description %></div>
+		<ul>
+			<% group.users.each do |user| %>
+				<li> <%= user.name %> </li>
+			<% end %>
+		</ul>
+	</div>
 </div>
