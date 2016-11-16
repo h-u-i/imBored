@@ -1,7 +1,22 @@
+<<<<<<< HEAD
+=======
+# == Schema Information
+#
+# Table name: events
+#
+#  id         :integer          not null, primary key
+#  name       :string
+#  date       :datetime
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+>>>>>>> 2546266e8a0dd7a12307fc1d7129e7ff6fee10f5
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
   name: MyString
+# <<<<<<< HEAD
   description: MyText
   month: MyString
   day: 1
@@ -15,3 +30,10 @@ two:
   day: 1
   year: 1
   user_id: 1
+# =======
+#   date: 2016-11-13 16:57:27
+#
+# two:
+#   name: MyString
+#   date: 2016-11-13 16:57:27
+# >>>>>>> 2546266e8a0dd7a12307fc1d7129e7ff6fee10f5
