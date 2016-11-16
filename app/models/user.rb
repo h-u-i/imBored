@@ -23,10 +23,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-# <<<<<<< HEAD
 
   has_many :events
-# =======
   has_and_belongs_to_many :groups, :join_table => :users_groups
-# >>>>>>> 2546266e8a0dd7a12307fc1d7129e7ff6fee10f5
 end
