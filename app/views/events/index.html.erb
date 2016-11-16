@@ -3,7 +3,6 @@
 <% @events.each do |event|%>
     <b><%= event.name %>- </b>
     <%= event.month %> <%= event.day %>, <%= event.year%>
-    <%# <%= button_to "Join", join_path(id: event), :class => "button medium", :method => :patch %>
     
     <br>
     <% if event.description.present?%>
