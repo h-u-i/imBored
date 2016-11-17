@@ -9,6 +9,14 @@ class GroupsController < ApplicationController
 		end
 	end
 
+	def show
+		@group = Group.find(params[:id])
+		if @group.nil?
+			flash[:error] = "Group no longer exists."
+			redirect_to groups_path()
+		end
+	end
+
 	def create
 		if current_user
 			group = Group.create(:name => params[:group][:name], :description => params[:group][:description])
@@ -31,7 +39,8 @@ class GroupsController < ApplicationController
 				flash[:error] = "You are already part of this group."
 			end
 		else
-			flash[:alert] = "You must be logged in."
+			flash[:alert] = "You must be logged in to join a group."
+			redirect_to "/users/sign_in"
 		end
 		redirect_to groups_path()
 	end

@@ -6,6 +6,11 @@
 	width: 850px;
 }
 
+a[class="group-link"] {
+	color: #000;
+	text-decoration: none;
+}
+
 .group-item {
 	height: 120px;
 	margin-top: 10px;
@@ -15,7 +20,9 @@
 	border-radius: 10px;
 	div {
 		float: none;
-		position: relative;
+	}
+	&:hover {
+		background-color: Honeydew;
 	}
 }
 
