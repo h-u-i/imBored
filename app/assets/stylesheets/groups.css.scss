@@ -12,7 +12,7 @@ a[class="group-link"] {
 }
 
 .group-item {
-	height: 120px;
+	height: 130px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	background-color: white;
@@ -42,4 +42,8 @@ a[class="group-link"] {
 		margin-left: auto;
 		margin-right: auto;
 	}
+}
+
+#group-info div {
+	word-wrap: break-word;
 }

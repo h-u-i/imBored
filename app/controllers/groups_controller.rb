@@ -19,16 +19,25 @@ class GroupsController < ApplicationController
 
 	def create
 		if current_user
-			group = Group.create(:name => params[:group][:name], :description => params[:group][:description])
-			group.users << current_user
-			flash[:success] = "Group created!"
-			redirect_to groups_path()
+			group = Group.new(group_params)
+			if group.save
+				group.users << current_user
+				flash[:success] = "Group created!"
+				redirect_to groups_path()
+			else
+				flash[:error] = "Error occurred with creating group."
+				redirect_to(:back)
+			end
 		else
 			flash[:error] = "You must be logged in to create a group."
 			redirect_to "/users/sign_in"
 		end
 	end
 	
+	def group_params
+		params.require(:group).permit(:name, :description)
+	end
+
 	def join
 		group = Group.find(params[:group_id])
 		if current_user
