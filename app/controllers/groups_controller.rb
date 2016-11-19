@@ -42,7 +42,7 @@ class GroupsController < ApplicationController
 			flash[:alert] = "You must be logged in to join a group."
 			redirect_to "/users/sign_in"
 		end
-		redirect_to groups_path()
+		redirect_to(:back)
 	end
 
 	def leave
