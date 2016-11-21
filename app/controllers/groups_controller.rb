@@ -19,7 +19,7 @@ class GroupsController < ApplicationController
 
 	def create
 		if current_user
-			group = Group.new(group_params)
+			group = Group.new(group_params.merge(:leader => current_user))
 			if group.save
 				group.users << current_user
 				flash[:success] = "Group created!"

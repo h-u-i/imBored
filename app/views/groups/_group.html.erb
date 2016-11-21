@@ -9,7 +9,7 @@
 				<div><%= group.description %></div>
 				<div> 
 					<% if group.users.size > 0 %>
-						<%= group.users.map(&:name).first(3).join(",") %> 
+						<%= group.users.first(3).map(&:name).join(", ") %> 
 							<% if group.users.size > 3 %>
 								<%= "and #{group.users.size - 3} more members" %>
 							<% end %>

@@ -6,6 +6,7 @@
 		<h1 id="group-title"><%= @group.name %></h1>
 		<div><%= @group.description %></div>
 		<% if @group.users.size > 0 %>
+			Leader: <%= @group.leader.name %> </br>
 			Members:
 			<ul>
 				<% @group.users.each do |user| %>
