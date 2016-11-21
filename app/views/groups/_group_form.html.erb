@@ -1,4 +1,4 @@
-<%= form_for  Group.new, :url => create_group_path(@group), :method => :post do |f| %>
+<%= form_for  Group.new, :url => {:action => "create" }, :method => :post do |f| %>
   <div class="form-field">
     <%= f.label :name, "Group Name:"%> </br> 
     <%= f.text_field :name, :required => true %>

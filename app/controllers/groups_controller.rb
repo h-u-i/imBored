@@ -19,7 +19,7 @@ class GroupsController < ApplicationController
 
 	def create
 		if current_user
-			group = Group.new(group_params.merge(:leader => current_user))
+			group = Group.new(group_params)
 			if group.save
 				group.users << current_user
 				flash[:success] = "Group created!"
@@ -35,11 +35,19 @@ class GroupsController < ApplicationController
 	end
 	
 	def group_params
-		params.require(:group).permit(:name, :description)
+		params.require(:group).permit(:name, :description).merge(:leader => current_user)
+	end
+
+	def destroy
+		group = Group.find(params[:id])
+		authorize group
+		group.destroy
+		flash[:success] = "Successfully deleted group."
+		redirect_to groups_path()
 	end
 
 	def join
-		group = Group.find(params[:group_id])
+		group = Group.find(params[:id])
 		if current_user
 			if not group.users.include? current_user
 				group.users << current_user
@@ -55,7 +63,7 @@ class GroupsController < ApplicationController
 	end
 
 	def leave
-		group = Group.find(params[:group_id])
+		group = Group.find(params[:id])
 		if current_user
 			if group.users.include? current_user
 				flash[:success] = "Successfully left group #{group.name}."
