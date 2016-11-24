@@ -19,14 +19,14 @@ class GroupsController < ApplicationController
 
 	def create
 		if current_user
-			group = Group.new(group_params)
+			group = Group.new(group_params.merge(:leader => current_user))
 			if group.save
 				group.users << current_user
 				flash[:success] = "Group created!"
 				redirect_to groups_path()
 			else
 				flash[:error] = "Error occurred with creating group."
-				redirect_to(:back)
+				redirect_to :back 
 			end
 		else
 			flash[:error] = "You must be logged in to create a group."
@@ -34,9 +34,18 @@ class GroupsController < ApplicationController
 		end
 	end
 	
-	def group_params
-		params.require(:group).permit(:name, :description).merge(:leader => current_user)
+	def update
+		group = Group.find(params[:id])
+		authorize group
+		group.update(group_params)
+		flash[:success] = "Group updated."
+		redirect_to :back 
 	end
+
+	def group_params
+		params.require(:group).permit(:name, :description)
+	end
+
 
 	def destroy
 		group = Group.find(params[:id])

@@ -1,5 +1,5 @@
 <%= form_for Group.new, :url => {:action => "create" }, :method => :post do |f| %>
-  <%= render "group_form_inner", :f => f %>
+  <%= render "group_form_inner", :f => f, :group => @group %>
   <%# Include friends dropdown here %>
   <%= f.submit "Create Group!", class: "btn btn-success" %>
 <% end %>

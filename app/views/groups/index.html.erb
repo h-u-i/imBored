@@ -1,8 +1,13 @@
 <div class="container groups-container">
-	<button class="btn btn-success" id="create-group-button" data-toggle="modal", data-target="groupModal">
+	<button class="btn btn-success modal-button" id="create-group-button" data-toggle="modal", data-target="groupModal">
 		<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
 		Create Group
 	</button>
 	<%= render @groups %>
 </div>
 <%= render "group_modal" %>
+
+<%= javascript_tag do %>
+  $(".modal-title").html("New Group");
+  $(".modal-body").html("<%= escape_javascript(render 'group_form') %>");
+<% end %>

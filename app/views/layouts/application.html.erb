@@ -6,7 +6,7 @@
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Im Bored" %>">
     <%= stylesheet_link_tag 'application.css', media: 'all', 'data-turbolinks-track' => 'reload' %>
     <%= javascript_include_tag 'application.js', 'data-turbolinks-track' => 'reload' %>
-    <%= javascript_include_tag "group" %>
+    <%= javascript_include_tag "modal" %>
 
     <%= csrf_meta_tags %>
   </head>
@@ -16,6 +16,7 @@
     </header>
     <main role="main">
        <%= render 'layouts/messages' %>
+       <%= render 'layouts/modal' %>
        <%= yield %>
     </main>
   </body>
