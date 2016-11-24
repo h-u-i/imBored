@@ -75,8 +75,13 @@ class GroupsController < ApplicationController
 		group = Group.find(params[:id])
 		if current_user
 			if group.users.include? current_user
-				flash[:success] = "Successfully left group #{group.name}."
-				group.users.delete(current_user)
+				if current_user == group.leader 
+					group.destroy
+					flash[:success] = "Successfully deleted group."
+				else
+					flash[:success] = "Successfully left group #{group.name}."
+					group.users.delete(current_user)
+				end
 			else
 				flash[:error] = "You are not a part of this group."
 			end
