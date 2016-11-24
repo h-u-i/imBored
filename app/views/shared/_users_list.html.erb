@@ -1,0 +1,6 @@
+<% if defined?(:users) %>
+	<table class="user-list alternate">
+		<tr class="title"> <td> <%= title || "Table" %>  </td></tr>
+		<%= render :partial => "shared/user", :collection => users %>
+	</table>
+<% end %>

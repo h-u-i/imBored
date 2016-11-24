@@ -4,15 +4,14 @@
 			<%= render 'group_button', group: @group %>
 		</div>
 		<h1 id="group-title"><%= @group.name %></h1>
-		<div><%= @group.description %></div>
+		<h4> Leader: <%= @group.leader.name || "None" %></h4>
+
+		<div class ="col-md-8" style="float: left"><%= @group.description %></div>
+
 		<% if @group.users.size > 0 %>
-			Leader: <%= @group.leader.name %> </br>
-			Members:
-			<ul>
-				<% @group.users.each do |user| %>
-					<li> <%= user.name %> </li>
-				<% end %>
-			</ul>
+			<div id="users" class="col-md-4" style="float: right">
+				<%= render "shared/users_list", :title => "Members", :users => @group.users %>
+			</div>
 		<% else %>
 			This group is empty!
 		<% end %>
