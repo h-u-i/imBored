@@ -7,6 +7,13 @@
     <br>
     <% if event.description.present?%>
         &nbsp; &nbsp; &nbsp; <%= event.description%>
-    <br>
     <%end%>
+    <%= button_to "Join event!", events_join_path(:event_id =>  event.id), :class => "button medium", :method => :patch %>
+    <%if not event.users.nil? %>
+    <b>Attendees: </b><br>
+        <% event.users.each do |user| %>
+            <%= user.name %> <br>
+        <% end%>
+    <% end%>
+    <br>
 <% end%>
