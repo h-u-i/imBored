@@ -1,11 +1,5 @@
 *.sqlite3
 log/development.log
-<<<<<<< HEAD
-tmp/*
-
-# Ignore application configuration
 /config/application.yml
-=======
-
 /tmp
->>>>>>> 21bf1759627aa9acb69d0445d44af7ca64def3a7
+
