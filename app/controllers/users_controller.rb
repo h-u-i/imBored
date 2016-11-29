@@ -12,4 +12,12 @@ class UsersController < ApplicationController
     end
   end
 
+
+
+  # def testemail
+  #   @user = current_user
+  #   UserMailer.welcome_email(@user).deliver_now
+  # end
+  # this is not working - Warren said MailChimp. 
+
 end
