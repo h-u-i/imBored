@@ -12,7 +12,15 @@ class EventsController < ApplicationController
       @event = Event.new(event_params)
       if @event.save
             flash[:success] = "Event created!"
+
+            # start daryus email edits: 
+            # UserMailer.welcome_email(current_user).deliver
+            ExampleMailer.sample_email(current_user).deliver
+            # end daryus email edits.
+
             redirect_to events_path(current_user.id)
+
+
       else
             flash[:error] = "Missing information"
             render :new
