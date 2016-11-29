@@ -1,0 +1,5 @@
+<%= form_for group, :url => group_path(group.id), :method => :patch do |f| %>
+  <%= render "group_form_inner", :f => f, :group => group %>
+  <%# Include friends dropdown here %>
+  <%= f.submit "Update Group!", class: "btn btn-success" %>
+<% end %>

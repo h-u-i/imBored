@@ -1,0 +1,19 @@
+<% if not group.users.include? current_user %>
+ 	<%= button_to join_group_path(:id=>group.id), :class=> "btn btn-success", :method => :patch do %>
+ 		<div>Join Group</div>
+ 		<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+ 	<% end %>
+<% else %>
+	<%= button_to leave_group_path(:id=>group.id), :class=> "btn btn-danger", :method => :delete, 
+		data: { confirm: current_user == group.leader ? "Leaving will delete this group. Are you sure?" : nil } do %>
+		<div>Leave Group</div>
+ 		<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+ 	<% end %>
+<% end %>
+<% if policy(group).destroy? %>
+	<%= button_to group_path(:id=>group.id), :class=> "btn btn-warning", :method => :delete, 
+		data: { confirm: 'Are you sure about deleting this group?' } do %>
+		<div>Delete Group</div>
+ 		<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+ 	<% end %>
+<% end %>

@@ -10,8 +10,8 @@ class EventsController < ApplicationController
 
   def create
       @event = Event.new(event_params)
-
       if @event.save
+            flash[:success] = "Event created!"
             redirect_to events_path(current_user.id)
       else
             flash[:error] = "Missing information"
@@ -20,7 +20,16 @@ class EventsController < ApplicationController
   end
 
   def event_params
-      params.require(:event).permit(:name, :description, :month, :day, :year)
+      params.require(:event).permit(:name, :month, :day, :year)
   end
 
+  def join
+      event = Event.find(params[:event_id])
+      if not event.users.include? current_user
+          event.users << current_user
+          flash[:success] = "Joined event!"
+      else
+          flash[:error] = "Already joined"
+      end
+  end
 end
