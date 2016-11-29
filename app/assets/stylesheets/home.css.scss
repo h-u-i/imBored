@@ -1,9 +1,14 @@
 #im-bored-button {
-	margin: 20px auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	width: 680px;
 	height: 155px;
 	font-size: 28px;
 	img {
 		float:left;
 	}
+}
+
+#bored-container {
+	text-align: center;
 }

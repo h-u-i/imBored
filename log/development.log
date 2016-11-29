@@ -1,0 +1,488 @@
+Started GET "/" for ::1 at 2016-11-28 23:33:49 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering visitors/home.html.erb within layouts/application
+  [1m[36mNotification Load (0.0ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications" INNER JOIN "users_notifications" ON "notifications"."id" = "users_notifications"."notification_id" WHERE "users_notifications"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered collection of visitors/_notification.html.erb [8 times] (1.0ms)
+  [1m[36mThingsToDo Load (0.0ms)[0m  [1m[34mSELECT "things_to_dos".* FROM "things_to_dos" INNER JOIN "users_things_to_dos" ON "things_to_dos"."id" = "users_things_to_dos"."things_to_do_id" WHERE "users_things_to_dos"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[36mGroup Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered visitors/_im_bored_form.html.erb (78.2ms)
+  Rendered visitors/home.html.erb within layouts/application (411.0ms)
+  Rendered layouts/_navigation_links.html.erb (1.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (60.2ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+  Rendered layouts/_modal.html.erb (0.0ms)
+Completed 200 OK in 1881ms (Views: 1835.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 23:33:55 -0800
+Processing by GroupsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (1.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["group_id", 5], ["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered groups/_group_button.html.erb (28.1ms)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 5]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["group_id", 5], ["LIMIT", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 5]]
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["group_id", 7], ["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered groups/_group_button.html.erb (3.0ms)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 7]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["group_id", 7], ["LIMIT", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 7]]
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["group_id", 8], ["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered groups/_group_button.html.erb (3.0ms)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 8]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["group_id", 8], ["LIMIT", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 8]]
+  Rendered collection of groups/_group.html.erb [3 times] (124.4ms)
+  Rendered groups/_group_modal.html.erb (0.0ms)
+  Rendered groups/_group_form_inner.html.erb (12.6ms)
+  Rendered groups/_group_form.html.erb (37.7ms)
+  Rendered groups/index.html.erb within layouts/application (239.2ms)
+  Rendered layouts/_navigation_links.html.erb (1.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (53.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_modal.html.erb (0.0ms)
+Completed 200 OK in 626ms (Views: 592.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 23:34:25 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering visitors/home.html.erb within layouts/application
+  [1m[36mNotification Load (0.5ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications" INNER JOIN "users_notifications" ON "notifications"."id" = "users_notifications"."notification_id" WHERE "users_notifications"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered collection of visitors/_notification.html.erb [8 times] (0.5ms)
+  [1m[36mThingsToDo Load (0.5ms)[0m  [1m[34mSELECT "things_to_dos".* FROM "things_to_dos" INNER JOIN "users_things_to_dos" ON "things_to_dos"."id" = "users_things_to_dos"."things_to_do_id" WHERE "users_things_to_dos"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[36mGroup Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered visitors/_im_bored_form.html.erb (6.5ms)
+  Rendered visitors/home.html.erb within layouts/application (70.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (51.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_modal.html.erb (0.5ms)
+Completed 200 OK in 727ms (Views: 724.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 23:34:58 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering visitors/home.html.erb within layouts/application
+  [1m[36mNotification Load (1.0ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications" INNER JOIN "users_notifications" ON "notifications"."id" = "users_notifications"."notification_id" WHERE "users_notifications"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered collection of visitors/_notification.html.erb [8 times] (1.0ms)
+  [1m[36mThingsToDo Load (0.0ms)[0m  [1m[34mSELECT "things_to_dos".* FROM "things_to_dos" INNER JOIN "users_things_to_dos" ON "things_to_dos"."id" = "users_things_to_dos"."things_to_do_id" WHERE "users_things_to_dos"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[36mGroup Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered visitors/_im_bored_form.html.erb (6.0ms)
+  Rendered visitors/home.html.erb within layouts/application (66.7ms)
+  Rendered layouts/_navigation_links.html.erb (1.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (48.1ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_modal.html.erb (0.0ms)
+Completed 200 OK in 457ms (Views: 452.3ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-11-28 23:36:21 -0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LpDQuwmQLxfQCCoCjIU9Z5sRot0KXa7P8dVxc7VPQ6u2FqPd1x3nQti8lEkGUN+Yv5uqBB10zkenAnK65c+agw=="}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 67ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 23:36:21 -0800
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (61.2ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_modal.html.erb (0.5ms)
+Completed 200 OK in 435ms (Views: 401.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-11-28 23:36:25 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (23.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (55.2ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_modal.html.erb (0.5ms)
+Completed 200 OK in 464ms (Views: 463.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-11-28 23:37:23 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (52.2ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_modal.html.erb (0.5ms)
+Completed 200 OK in 462ms (Views: 459.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-29 11:40:42 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (474.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (51.5ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+  Rendered layouts/_modal.html.erb (1.0ms)
+Completed 200 OK in 1675ms (Views: 1612.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-11-29 11:40:46 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (73.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (177.8ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_modal.html.erb (0.0ms)
+Completed 200 OK in 868ms (Views: 848.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-11-29 11:40:52 -0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eNo8RfXofSaZc5JMz8uciluBYvrq1KlywSsGfv3faZ6Wj7iN1m+kyGEEb7I6e9M6Q/HH8cupRLsFHJHVi4cylg==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-11-29 19:40:53 UTC], ["last_sign_in_at", 2016-11-29 07:25:31 UTC], ["sign_in_count", 10], ["updated_at", 2016-11-29 19:40:53 UTC], ["id", 1]]
+  [1m[35m (28.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 419ms (ActiveRecord: 29.5ms)
+
+
+Started GET "/" for ::1 at 2016-11-29 11:40:53 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering visitors/home.html.erb within layouts/application
+  [1m[36mNotification Load (0.0ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications" INNER JOIN "users_notifications" ON "notifications"."id" = "users_notifications"."notification_id" WHERE "users_notifications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered collection of visitors/_notification.html.erb [3 times] (0.0ms)
+  [1m[36mThingsToDo Load (0.5ms)[0m  [1m[34mSELECT "things_to_dos".* FROM "things_to_dos" INNER JOIN "users_things_to_dos" ON "things_to_dos"."id" = "users_things_to_dos"."things_to_do_id" WHERE "users_things_to_dos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mGroup Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered visitors/_im_bored_form.html.erb (59.2ms)
+  Rendered visitors/home.html.erb within layouts/application (427.0ms)
+  Rendered layouts/_navigation_links.html.erb (1.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (51.1ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+  Rendered layouts/_modal.html.erb (0.0ms)
+Completed 200 OK in 954ms (Views: 949.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/events" for ::1 at 2016-11-29 11:40:58 -0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 4]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 5]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 6]]
+  Rendered events/index.html.erb within layouts/application (26.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (2.0ms)
+  Rendered layouts/_navigation.html.erb (53.7ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+  Rendered layouts/_modal.html.erb (1.0ms)
+Completed 200 OK in 423ms (Views: 377.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2016-11-29 11:42:04 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering visitors/home.html.erb within layouts/application
+  [1m[36mNotification Load (0.0ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications" INNER JOIN "users_notifications" ON "notifications"."id" = "users_notifications"."notification_id" WHERE "users_notifications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered collection of visitors/_notification.html.erb [3 times] (0.0ms)
+  [1m[36mThingsToDo Load (0.5ms)[0m  [1m[34mSELECT "things_to_dos".* FROM "things_to_dos" INNER JOIN "users_things_to_dos" ON "things_to_dos"."id" = "users_things_to_dos"."things_to_do_id" WHERE "users_things_to_dos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered visitors/_im_bored_form.html.erb (5.6ms)
+  Rendered visitors/home.html.erb within layouts/application (61.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (86.1ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_modal.html.erb (1.0ms)
+Completed 200 OK in 8508ms (Views: 8504.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-29 11:42:18 -0800
+Processing by GroupsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["group_id", 5], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered groups/_group_button.html.erb (36.1ms)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 5]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["group_id", 5], ["LIMIT", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 5]]
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["group_id", 7], ["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered groups/_group_button.html.erb (2.0ms)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 7]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["group_id", 7], ["LIMIT", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 7]]
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["group_id", 8], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered groups/_group_button.html.erb (3.0ms)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 8]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["group_id", 8], ["LIMIT", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 8]]
+  Rendered collection of groups/_group.html.erb [3 times] (127.3ms)
+  Rendered groups/_group_modal.html.erb (1.0ms)
+  Rendered groups/_group_form_inner.html.erb (41.1ms)
+  Rendered groups/_group_form.html.erb (193.6ms)
+  Rendered groups/index.html.erb within layouts/application (482.4ms)
+  Rendered layouts/_navigation_links.html.erb (1.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (56.2ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+  Rendered layouts/_modal.html.erb (0.0ms)
+Completed 200 OK in 1079ms (Views: 1047.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users" for ::1 at 2016-11-29 11:42:22 -0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/_user.html.erb (0.0ms)
+  Rendered users/_user.html.erb (0.0ms)
+  Rendered users/_user.html.erb (0.0ms)
+  Rendered users/_user.html.erb (1.0ms)
+  Rendered users/_user.html.erb (0.0ms)
+  Rendered users/index.html.erb within layouts/application (527.1ms)
+  Rendered layouts/_navigation_links.html.erb (1.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (52.9ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_modal.html.erb (1.0ms)
+Completed 200 OK in 916ms (Views: 887.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2016-11-29 11:42:24 -0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 4]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 5]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 6]]
+  Rendered events/index.html.erb within layouts/application (22.1ms)
+  Rendered layouts/_navigation_links.html.erb (1.0ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (4.0ms)
+  Rendered layouts/_navigation.html.erb (58.2ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+  Rendered layouts/_modal.html.erb (0.5ms)
+Completed 200 OK in 486ms (Views: 428.6ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-29 11:42:30 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering visitors/home.html.erb within layouts/application
+  [1m[36mNotification Load (0.0ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications" INNER JOIN "users_notifications" ON "notifications"."id" = "users_notifications"."notification_id" WHERE "users_notifications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered collection of visitors/_notification.html.erb [3 times] (0.5ms)
+  [1m[36mThingsToDo Load (1.0ms)[0m  [1m[34mSELECT "things_to_dos".* FROM "things_to_dos" INNER JOIN "users_things_to_dos" ON "things_to_dos"."id" = "users_things_to_dos"."things_to_do_id" WHERE "users_things_to_dos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mGroup Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered visitors/_im_bored_form.html.erb (15.0ms)
+  Rendered visitors/home.html.erb within layouts/application (73.2ms)
+  Rendered layouts/_navigation_links.html.erb (1.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (54.2ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+  Rendered layouts/_modal.html.erb (0.0ms)
+Completed 200 OK in 562ms (Views: 479.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-29 11:44:16 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering visitors/home.html.erb within layouts/application
+  [1m[36mNotification Load (0.5ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications" INNER JOIN "users_notifications" ON "notifications"."id" = "users_notifications"."notification_id" WHERE "users_notifications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered collection of visitors/_notification.html.erb [3 times] (0.0ms)
+  [1m[36mThingsToDo Load (1.0ms)[0m  [1m[34mSELECT "things_to_dos".* FROM "things_to_dos" INNER JOIN "users_things_to_dos" ON "things_to_dos"."id" = "users_things_to_dos"."things_to_do_id" WHERE "users_things_to_dos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mGroup Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered visitors/_im_bored_form.html.erb (6.0ms)
+  Rendered visitors/home.html.erb within layouts/application (284.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (53.1ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_modal.html.erb (1.0ms)
+Completed 200 OK in 781ms (Views: 777.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2016-11-29 11:45:56 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering visitors/home.html.erb within layouts/application
+  [1m[36mNotification Load (1.0ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications" INNER JOIN "users_notifications" ON "notifications"."id" = "users_notifications"."notification_id" WHERE "users_notifications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered collection of visitors/_notification.html.erb [3 times] (0.0ms)
+  [1m[36mThingsToDo Load (0.0ms)[0m  [1m[34mSELECT "things_to_dos".* FROM "things_to_dos" INNER JOIN "users_things_to_dos" ON "things_to_dos"."id" = "users_things_to_dos"."things_to_do_id" WHERE "users_things_to_dos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mGroup Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered visitors/_im_bored_form.html.erb (10.0ms)
+  Rendered visitors/home.html.erb within layouts/application (67.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (51.2ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_modal.html.erb (1.0ms)
+Completed 200 OK in 546ms (Views: 543.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-29 11:47:11 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering visitors/home.html.erb within layouts/application
+  [1m[36mNotification Load (0.0ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications" INNER JOIN "users_notifications" ON "notifications"."id" = "users_notifications"."notification_id" WHERE "users_notifications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered collection of visitors/_notification.html.erb [3 times] (1.0ms)
+  [1m[36mThingsToDo Load (0.0ms)[0m  [1m[34mSELECT "things_to_dos".* FROM "things_to_dos" INNER JOIN "users_things_to_dos" ON "things_to_dos"."id" = "users_things_to_dos"."things_to_do_id" WHERE "users_things_to_dos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mGroup Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered visitors/_im_bored_form.html.erb (6.0ms)
+  Rendered visitors/home.html.erb within layouts/application (61.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (52.1ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_modal.html.erb (0.0ms)
+Completed 200 OK in 891ms (Views: 888.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-29 11:47:24 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering visitors/home.html.erb within layouts/application
+  [1m[36mNotification Load (0.0ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications" INNER JOIN "users_notifications" ON "notifications"."id" = "users_notifications"."notification_id" WHERE "users_notifications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered collection of visitors/_notification.html.erb [3 times] (0.5ms)
+  [1m[36mThingsToDo Load (0.0ms)[0m  [1m[34mSELECT "things_to_dos".* FROM "things_to_dos" INNER JOIN "users_things_to_dos" ON "things_to_dos"."id" = "users_things_to_dos"."things_to_do_id" WHERE "users_things_to_dos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mGroup Load (1.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered visitors/_im_bored_form.html.erb (5.0ms)
+  Rendered visitors/home.html.erb within layouts/application (60.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (55.2ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+  Rendered layouts/_modal.html.erb (1.0ms)
+Completed 200 OK in 497ms (Views: 494.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-29 11:47:26 -0800
+Processing by GroupsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["group_id", 5], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered groups/_group_button.html.erb (4.0ms)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 5]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["group_id", 5], ["LIMIT", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 5]]
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["group_id", 7], ["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered groups/_group_button.html.erb (2.0ms)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 7]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["group_id", 7], ["LIMIT", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 7]]
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["group_id", 8], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered groups/_group_button.html.erb (3.0ms)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 8]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["group_id", 8], ["LIMIT", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 8]]
+  Rendered collection of groups/_group.html.erb [3 times] (103.3ms)
+  Rendered groups/_group_modal.html.erb (0.0ms)
+  Rendered groups/_group_form_inner.html.erb (1.0ms)
+  Rendered groups/_group_form.html.erb (26.1ms)
+  Rendered groups/index.html.erb within layouts/application (213.6ms)
+  Rendered layouts/_navigation_links.html.erb (1.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (312.6ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+  Rendered layouts/_modal.html.erb (0.0ms)
+Completed 200 OK in 1040ms (Views: 994.9ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/events" for ::1 at 2016-11-29 11:47:27 -0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 4]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 5]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 6]]
+  Rendered events/index.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_navigation_links.html.erb (1.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (82.3ms)
+  Rendered layouts/_navigation.html.erb (417.4ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_modal.html.erb (1.0ms)
+Completed 200 OK in 857ms (Views: 830.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-29 11:47:30 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering visitors/home.html.erb within layouts/application
+  [1m[36mNotification Load (1.0ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications" INNER JOIN "users_notifications" ON "notifications"."id" = "users_notifications"."notification_id" WHERE "users_notifications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered collection of visitors/_notification.html.erb [3 times] (1.0ms)
+  [1m[36mThingsToDo Load (0.0ms)[0m  [1m[34mSELECT "things_to_dos".* FROM "things_to_dos" INNER JOIN "users_things_to_dos" ON "things_to_dos"."id" = "users_things_to_dos"."things_to_do_id" WHERE "users_things_to_dos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mGroup Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered visitors/_im_bored_form.html.erb (99.4ms)
+  Rendered visitors/home.html.erb within layouts/application (235.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (52.8ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+  Rendered layouts/_modal.html.erb (1.0ms)
+Completed 200 OK in 828ms (Views: 825.7ms | ActiveRecord: 1.0ms)
+
+
