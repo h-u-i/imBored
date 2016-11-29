@@ -13,9 +13,3 @@ Event.create(name: 'Moana', description: 'Friday night showtime!', month: 'Decem
 Event.create(name: 'Bar', description: 'Drink until drunk', month: 'December', day: '31', year: '2016')
 Event.create(name: 'Swimming', month: 'June', day: '1', year: '2017')
 
-ThingsToDo.create(name: 'Breakfast')
-ThingsToDo.create(name: 'Lunch')
-ThingsToDo.create(name: 'Dinner')
-ThingsToDo.create(name: 'Study')
-ThingsToDo.create(name: 'Bar')
-

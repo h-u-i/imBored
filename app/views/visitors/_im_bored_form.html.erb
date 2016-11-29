@@ -1,0 +1,11 @@
+<%= form_for Notification.new, :url => bored_path(), :method => :post do |f| %>
+	<%= f.label :description, "Thing to do:" %> 
+	<%= f.collection_select :description, user.things_to_dos.all, "name", "name" %> </br>
+	<%= f.label :groups, "Groups to notify:" %> </br>
+	<% if user.groups.all.size > 0 %>
+		<%= collection_check_boxes(:group, :groups,  user.groups.all, "id", "name") %> </br>
+	<% else %>
+		No groups to notify. Join a group! </br>
+	<% end %>
+	<%= f.submit "Send Status!", class: "btn btn-success" %>
+<% end %>

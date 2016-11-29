@@ -7,6 +7,9 @@ img {
   @extend .img-responsive;
   margin: 0 auto;
   }
+.container {
+  display: flex;
+}
 // override for the 'Home' navigation link
 .navbar-brand {
   font-size: inherit;

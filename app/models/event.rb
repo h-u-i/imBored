@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: events
+#
+#  id          :integer          not null, primary key
+#  name        :string
+#  description :text
+#  month       :string
+#  day         :integer
+#  year        :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
 class Event < ApplicationRecord
     include ActiveModel::Validations
     validates :name, :month, :day, :year, presence: true
