@@ -31,5 +31,6 @@ class EventsController < ApplicationController
       else
           flash[:error] = "Already joined"
       end
+      redirect_to "/events"
   end
 end

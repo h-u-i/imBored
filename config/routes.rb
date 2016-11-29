@@ -14,4 +14,7 @@ Rails.application.routes.draw do
   post '/events', to: 'events#create'
   patch '/events/join', to: 'events#join'
 
+  get '/things_to_dos', to: 'things_to_dos#index'
+  post '/things_to_dos', to: 'things_to_dos#create'
+
 end
