@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 20161129063035) do
-
-
->>>>>>> 21bf1759627aa9acb69d0445d44af7ca64def3a7
 
   create_table "events", force: :cascade do |t|
     t.string   "name"
