@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161129050154) do
-
+ActiveRecord::Schema.define(version: 20161129063035) do
 
   create_table "events", force: :cascade do |t|
     t.string   "name"
@@ -32,17 +31,17 @@ ActiveRecord::Schema.define(version: 20161129050154) do
     t.index ["leader_id"], name: "index_groups_on_leader_id"
   end
 
-<<<<<<< HEAD
   create_table "notifications", force: :cascade do |t|
     t.string   "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-=======
+    t.string   "creator"
+  end
+
   create_table "things_to_dos", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
->>>>>>> bd27caa860401b8aa58a6a143d21b022ca30ffb4
   end
 
   create_table "users", force: :cascade do |t|
@@ -77,19 +76,18 @@ ActiveRecord::Schema.define(version: 20161129050154) do
     t.index ["user_id"], name: "index_users_groups_on_user_id"
   end
 
-<<<<<<< HEAD
   create_table "users_notifications", force: :cascade do |t|
     t.integer "user_id"
     t.integer "notification_id"
     t.index ["notification_id"], name: "index_users_notifications_on_notification_id"
     t.index ["user_id"], name: "index_users_notifications_on_user_id"
-=======
+  end
+
   create_table "users_things_to_dos", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "things_to_do_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
->>>>>>> bd27caa860401b8aa58a6a143d21b022ca30ffb4
   end
 
 end

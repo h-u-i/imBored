@@ -1,7 +1,7 @@
 class ThingsToDosController < ApplicationController
     def index
         @thingstodos = ThingsToDo.new
-        @things = ThingsToDo.all
+        @things = current_user.things_to_dos
     end
 
     def create
