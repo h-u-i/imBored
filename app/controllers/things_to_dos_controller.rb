@@ -1,12 +1,13 @@
 class ThingsToDosController < ApplicationController
     def index
         @thingstodos = ThingsToDo.new
-        @things = ThingsToDo.all
+        @things = current_user.things_to_dos
     end
 
     def create
         @thingstodos = ThingsToDo.new(thingstodos_params)
         if @thingstodos.save
+            @thingstodos.users << current_user
             flash[:success] = "Thing to do created!"
             redirect_to things_to_dos_path(current_user.id)
         else

@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161129043718) do
+
+ActiveRecord::Schema.define(version: 20161129063035) do
+
+
+>>>>>>> 21bf1759627aa9acb69d0445d44af7ca64def3a7
 
   create_table "events", force: :cascade do |t|
     t.string   "name"
@@ -29,6 +33,13 @@ ActiveRecord::Schema.define(version: 20161129043718) do
     t.datetime "updated_at",  null: false
     t.integer  "leader_id"
     t.index ["leader_id"], name: "index_groups_on_leader_id"
+  end
+
+  create_table "notifications", force: :cascade do |t|
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "creator"
   end
 
   create_table "things_to_dos", force: :cascade do |t|
@@ -67,6 +78,13 @@ ActiveRecord::Schema.define(version: 20161129043718) do
     t.integer "group_id"
     t.index ["group_id"], name: "index_users_groups_on_group_id"
     t.index ["user_id"], name: "index_users_groups_on_user_id"
+  end
+
+  create_table "users_notifications", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "notification_id"
+    t.index ["notification_id"], name: "index_users_notifications_on_notification_id"
+    t.index ["user_id"], name: "index_users_notifications_on_user_id"
   end
 
   create_table "users_things_to_dos", force: :cascade do |t|
