@@ -8,6 +8,7 @@
 # makes 'Your_Gmail_Username' available as ENV["GMAIL_USERNAME"]
 
 
-GMAIL_USERNAME: 'Your_Gmail_Username'
-GMAIL_PASSWORD: 'Yourgmailpassword'
+GMAIL_USERNAME: 'imboredrails@gmail.com'
+GMAIL_PASSWORD: '34^55Xr"95:OT0J'
+DOMAIN_NAME: 'mail.gmail.com'
 

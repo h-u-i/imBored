@@ -2,6 +2,7 @@ require 'set'
 
 class VisitorsController < ApplicationController
 
+
 	def index
 		if current_user
 			@user = current_user
@@ -35,4 +36,5 @@ class VisitorsController < ApplicationController
 	def bored_params
 		params.require(:notification).permit(:description)
 	end
+>>>>>>> 21bf1759627aa9acb69d0445d44af7ca64def3a7
 end
