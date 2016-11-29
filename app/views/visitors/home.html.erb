@@ -1,0 +1,13 @@
+<div class="container">
+
+	<button class="btn btn-success modal-button" id="im-bored-button" data-toggle="modal">
+		<!-- <%= image_tag("Placeholder.png") %> -->
+		<div>IM BORED!</div>
+	</button>
+	<%= render @users.notifications %>
+</div>
+
+<%= javascript_tag do %>
+  $(".modal-title").html("I'm Bored!");
+  $(".modal-body").html("<%= escape_javascript(render 'im_bored_form', :user => @user) %>");
+<% end %>
