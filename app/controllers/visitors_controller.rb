@@ -7,4 +7,7 @@ class VisitorsController < ApplicationController
 		end
 	end
 
+	def bored_update
+
+	end
 end

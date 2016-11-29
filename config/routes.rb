@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root to: 'visitors#index'
+  post "bored_create", to: 'visitors#bored_update', as: "bored"
 
   resources :groups, only: [:index, :show, :create, :destroy, :update]
   patch "group_join", to: "groups#join", as: "join_group"
