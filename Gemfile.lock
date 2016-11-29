@@ -224,7 +224,6 @@ DEPENDENCIES
 RUBY VERSION
 
    ruby 2.3.0p0
->>>>>>> bdcb654ed2d7ac74cfd9e701960ca59c27c4ff2e
 
 BUNDLED WITH
    1.13.6
