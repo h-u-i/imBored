@@ -1,3 +1,5 @@
 <%= form_for Notification.new, :url => bored_path(), :method => :post do |f| %>
 	<%= f.collection_select :description,  user.things_to_do.all, "name", "name" %>
+	<%= f.collection_check_boxes :groups,  user.groups, "name", "name" %>
+
 <% end %>

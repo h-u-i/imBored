@@ -1,3 +1,5 @@
+require 'set'
+
 class VisitorsController < ApplicationController
 
 	def index
@@ -8,6 +10,14 @@ class VisitorsController < ApplicationController
 	end
 
 	def bored_update
-
+		notification = Notification.new(:description => params[:notification][:description])
+		if notification.save
+			notification.users << current_user
+			users = Set.new
+			
+		else 
+			flash[:error] = "Could not create status."
+		end
+		redirect_to root
 	end
 end
