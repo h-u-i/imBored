@@ -7,6 +7,10 @@
           <% @users.each do |user| %>
             <tr>
               <%= render user %>
+
+
+<%= button_to "Test email!", emailtest_path(id: user), :class => "button medium", :method => :get %>
+
             </tr>
           <% end %>
         </tbody>
@@ -14,3 +18,5 @@
     </div>
   </div>
 </div>
+
+
