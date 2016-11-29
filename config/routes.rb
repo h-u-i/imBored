@@ -13,4 +13,7 @@ Rails.application.routes.draw do
   get '/events/new', to: 'events#new'
   post '/events', to: 'events#create'
 
+
+  get 'emailtest' => 'users#testemail', as: 'emailtest'
+
 end
