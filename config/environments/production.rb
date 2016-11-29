@@ -84,6 +84,17 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = false
 
 
+    ActionMailer::Base.smtp_settings = {
+  :address        => 'smtp.gmail.com',
+  :domain         => 'mail.google.com',
+  :port           => 587,
+  :user_name      => 'imboredrails@gmail.com',
+  :password       => '34^55Xr"95:OT0J',
+  :authentication => :plain,
+  :enable_starttls_auto => true
+}
+
+
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 

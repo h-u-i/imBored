@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'annotate'
 gem 'pundit'
+gem 'figaro'
 
 group :development, :test do
   gem 'byebug', platform: :mri

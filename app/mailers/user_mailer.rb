@@ -6,4 +6,7 @@ class UserMailer < ApplicationMailer
 		mail(to: @user.email, subject: 'Subject test.')
 	end
 
+# railsDecal
+# imBoredRails -> imboredrails@gmail.com
+
 end
