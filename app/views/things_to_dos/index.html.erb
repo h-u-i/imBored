@@ -1,0 +1,12 @@
+<h1>Let's do something???</h1>
+
+<%= simple_form_for @thingstodos, :url => {:action => "create"} do |f| %>
+    <%= f.input :name , placeholder: "Let's do this!!!"%>
+    <%= f.button :submit %>
+<% end %>
+<br>
+<b> So far, here are some things to do: </b><br>
+<% @things.each do |thing| %> 
+    <%= thing.name %><br>
+<% end%>
+    

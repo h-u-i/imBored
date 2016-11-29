@@ -16,5 +16,7 @@ Rails.application.routes.draw do
 
 
   get 'emailtest' => 'users#testemail', as: 'emailtest'
+  get '/things_to_dos', to: 'things_to_dos#index'
+  post '/things_to_dos', to: 'things_to_dos#create'
 
 end
