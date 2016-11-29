@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20161128015954) do
     t.string   "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "leader_id"
+    t.index ["leader_id"], name: "index_groups_on_leader_id"
   end
 
   create_table "users", force: :cascade do |t|

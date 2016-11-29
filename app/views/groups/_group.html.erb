@@ -1,20 +1,22 @@
-<div class="group-item">
-	<%= group.name %>
-	<%= group.description %>
-	<ul>
-		<% group.users.each do |user| %>
-			<li> <%= user.name %> </li>
-		<% end %>
-	</ul>
-	<% if not group.users.include? current_user %>
-	 	<%= button_to join_group_path(:group_id => group.id), :class=> "btn btn-success", :method => :patch do %>
-	 		<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-	 		 Join Group
-	 	<% end %>
-	<% else %>
-		<%= button_to leave_group_path(:group_id => group.id), :class=> "btn btn-danger", :method => :delete do %>
-	 		<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-	 		 Leave Group
-	 	<% end %>
+<div class="group-wrapper">
+	<%= link_to group_path(group.id), :class => "group-link" do %>
+		<div class="group-item">
+			<div id="side" class="col-md-2">
+				<%= render 'group_button', group: group %>
+			</div>
+			<div class="col-md-10" id= "group-info"> 
+				<h3 id="group-title"><%= group.name %></h3>
+				<div><%= group.description %></div>
+				<div> 
+					<% if group.users.size > 0 %>
+						<%= group.users.first(3).map(&:name).join(", ") %> 
+							<% if group.users.size > 3 %>
+								<%= "and #{group.users.size - 3} more members" %>
+							<% end %>
+						<%= "#{group.users.size == 1 ? 'is' : 'are'} in this group." %>
+					<% end %>
+				</div>
+			</div>
+		</div>
 	<% end %>
 </div>

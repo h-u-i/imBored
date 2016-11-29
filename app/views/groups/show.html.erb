@@ -1,0 +1,35 @@
+<div class="group-wrapper">
+	<div class="container groups-container">
+		<div id="side" class="col-md-2" style="margin-top: 14px">
+			<%= render 'group_button', group: @group %>
+			
+		</div>
+		<h1 id="group-title"><%= @group.name %></h1>
+		<h4> Leader: <%= @group.leader.name || "None" %></h4>
+		<div>
+			<% if policy(@group).update? %>
+				<button class="btn btn-success modal-button" id="create-group-button" data-toggle="modal", data-target="groupModal">
+					<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
+					Update Group
+				</button>
+			<% end %>
+		</div>
+		<div style="margin-top: 10px;"" >
+			<div class="col-md-8">
+				<%= @group.description %>
+			</div>
+			<% if @group.users.size > 0 %>
+				<div id="users" class="col-md-4" style="float: right">
+					<%= render "shared/users_list", :title => "Members", :users => @group.users %>
+				</div>
+			<% else %>
+				This group is empty!
+			<% end %>
+		</div>
+	</div>
+</div>
+
+<%= javascript_tag do %>
+  $(".modal-title").html("Update Group");
+  $(".modal-body").html("<%= escape_javascript(render 'group_update_form', :group => @group) %>");
+<% end %>

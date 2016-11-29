@@ -2,11 +2,55 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.form-field{ 
-	input {
-		width: 50%;
+.groups-container {
+	width: 850px;
+}
+
+a[class="group-link"] {
+	color: #000;
+	text-decoration: none;
+}
+
+.group-item {
+	height: 130px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: white;
+	border: 4px solid LightGreen;
+	border-radius: 10px;
+	div {
+		float: none;
 	}
-	textarea {
-		width: 100%;
+	&:hover {
+		background-color: Honeydew;
 	}
+}
+
+.group-wrapper #side {
+	float: right;
+	padding: 2px;
+	height: 100%;
+	form[class="button_to"] {
+		display: flex;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		&:nth-child(1):nth-last-child(1) {
+			height: 100%;
+		}
+		&:nth-child(1):nth-last-child(2),
+		&:nth-child(2):nth-last-child(1) {
+			height: 50%;
+		}
+	}
+
+	button {
+		padding: 0;
+		width: 96px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+#group-info div {
+	word-wrap: break-word;
 }
