@@ -26,4 +26,5 @@ class User < ApplicationRecord
 
   has_and_belongs_to_many :events, :join_table => :users_events
   has_and_belongs_to_many :groups, :join_table => :users_groups
+  has_and_belongs_to_many :things_to_dos
 end
