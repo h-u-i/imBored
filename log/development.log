@@ -21131,3 +21131,880 @@ Completed 200 OK in 111ms (Views: 101.7ms | ActiveRecord: 1.2ms)
 >>>>>>> 5e24fe35d89f4472322cc4a354f4c8aecefb0ef3
 
 
+Started GET "/" for ::1 at 2016-11-28 23:50:56 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+SyntaxError - syntax error, unexpected >>, expecting keyword_end
+>>>>>>> 21bf1759627aa9acb69d0445d44af7ca64def3a7
+  ^:
+  app/controllers/visitors_controller.rb:39:in `'
+  activesupport (5.0.0.1) lib/active_support/dependencies.rb:477:in `load'
+  activesupport (5.0.0.1) lib/active_support/dependencies.rb:477:in `block in load_file'
+  activesupport (5.0.0.1) lib/active_support/dependencies.rb:662:in `new_constants_in'
+  activesupport (5.0.0.1) lib/active_support/dependencies.rb:476:in `load_file'
+  activesupport (5.0.0.1) lib/active_support/dependencies.rb:375:in `block in require_or_load'
+  activesupport (5.0.0.1) lib/active_support/dependencies.rb:37:in `block in load_interlock'
+  activesupport (5.0.0.1) lib/active_support/dependencies/interlock.rb:12:in `block in loading'
+  activesupport (5.0.0.1) lib/active_support/concurrency/share_lock.rb:117:in `exclusive'
+  activesupport (5.0.0.1) lib/active_support/dependencies/interlock.rb:11:in `loading'
+  activesupport (5.0.0.1) lib/active_support/dependencies.rb:37:in `load_interlock'
+  activesupport (5.0.0.1) lib/active_support/dependencies.rb:358:in `require_or_load'
+  activesupport (5.0.0.1) lib/active_support/dependencies.rb:511:in `load_missing_constant'
+  activesupport (5.0.0.1) lib/active_support/dependencies.rb:203:in `const_missing'
+  activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:268:in `const_get'
+  activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:268:in `block in constantize'
+  activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:266:in `each'
+  activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:266:in `inject'
+  activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:266:in `constantize'
+  activesupport (5.0.0.1) lib/active_support/dependencies.rb:583:in `get'
+  activesupport (5.0.0.1) lib/active_support/dependencies.rb:614:in `constantize'
+  actionpack (5.0.0.1) lib/action_dispatch/http/request.rb:93:in `controller_class'
+  actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+  actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+  actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+  actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+  actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+  actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+  warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.6) lib/warden/manager.rb:34:in `call'
+  rack (2.0.1) lib/rack/etag.rb:25:in `call'
+  rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.1) lib/rack/head.rb:12:in `call'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+  actionpack (5.0.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.0.0.1) lib/active_record/migration.rb:552:in `call'
+  actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+  activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+  activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+  activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+  actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+  web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+  activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+  railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+  rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+  railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+  puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+  puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+  puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+
+Started POST "/__better_errors/a31473bcaed5d1ec/variables" for ::1 at 2016-11-28 23:50:56 -0800
+Started GET "/" for ::1 at 2016-11-28 23:51:26 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (156.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (7.3ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+  Rendered layouts/_modal.html.erb (0.5ms)
+Completed 200 OK in 326ms (Views: 310.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-11-28 23:52:23 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (27.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (3.5ms)
+  Rendered layouts/_navigation.html.erb (8.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_modal.html.erb (0.4ms)
+Completed 200 OK in 166ms (Views: 148.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-11-28 23:52:33 -0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kF6ILLgVVgyafvtZcrQUtt+dfr26FZMyjRijDTRF7Fbcf1TJvST+zOvEjv6yby6TTtzxMofNivZ1PyudVUbt7w==", "user"=>{"email"=>"ashleyhui@berkeley.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ashleyhui@berkeley.edu"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-11-29 07:52:33 UTC], ["last_sign_in_at", 2016-11-29 07:39:59 UTC], ["sign_in_count", 6], ["updated_at", 2016-11-29 07:52:33 UTC], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 188ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 23:52:33 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering visitors/home.html.erb within layouts/application
+  [1m[36mNotification Load (0.2ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications" INNER JOIN "users_notifications" ON "notifications"."id" = "users_notifications"."notification_id" WHERE "users_notifications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered collection of visitors/_notification.html.erb [0 times] (0.0ms)
+  [1m[36mThingsToDo Load (0.4ms)[0m  [1m[34mSELECT "things_to_dos".* FROM "things_to_dos" INNER JOIN "users_things_to_dos" ON "things_to_dos"."id" = "users_things_to_dos"."things_to_do_id" WHERE "users_things_to_dos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered visitors/_im_bored_form.html.erb (60.1ms)
+  Rendered visitors/home.html.erb within layouts/application (136.1ms)
+  Rendered layouts/_navigation_links.html.erb (1.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (7.3ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+  Rendered layouts/_modal.html.erb (0.4ms)
+Completed 200 OK in 216ms (Views: 210.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/things_to_dos" for ::1 at 2016-11-28 23:52:38 -0800
+Processing by ThingsToDosController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering things_to_dos/index.html.erb within layouts/application
+  [1m[36mThingsToDo Load (0.8ms)[0m  [1m[34mSELECT "things_to_dos".* FROM "things_to_dos" INNER JOIN "users_things_to_dos" ON "things_to_dos"."id" = "users_things_to_dos"."things_to_do_id" WHERE "users_things_to_dos"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered things_to_dos/index.html.erb within layouts/application (45.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (5.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_modal.html.erb (0.3ms)
+Completed 200 OK in 118ms (Views: 111.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 23:52:43 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering visitors/home.html.erb within layouts/application
+  [1m[36mNotification Load (0.2ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications" INNER JOIN "users_notifications" ON "notifications"."id" = "users_notifications"."notification_id" WHERE "users_notifications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered collection of visitors/_notification.html.erb [0 times] (0.0ms)
+  [1m[36mThingsToDo Load (0.2ms)[0m  [1m[34mSELECT "things_to_dos".* FROM "things_to_dos" INNER JOIN "users_things_to_dos" ON "things_to_dos"."id" = "users_things_to_dos"."things_to_do_id" WHERE "users_things_to_dos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered visitors/_im_bored_form.html.erb (11.7ms)
+  Rendered visitors/home.html.erb within layouts/application (22.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (6.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_modal.html.erb (0.9ms)
+Completed 200 OK in 95ms (Views: 91.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/bored_create" for ::1 at 2016-11-28 23:52:47 -0800
+Processing by VisitorsController#bored_update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y+mWDj59fElBpZdWXkPWjF4e1/gzXxIBgWHWGb+19HQ6zUQOnKIV3bhLS+yHwI/j/ZJ3GPXTjWCoxDWUZR2zMA==", "notification"=>{"description"=>"Drink"}, "group"=>{"groups"=>[""]}, "commit"=>"Send Status!"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "notifications" ("description", "created_at", "updated_at", "creator") VALUES (?, ?, ?, ?)[0m  [["description", "Drink"], ["created_at", 2016-11-29 07:52:47 UTC], ["updated_at", 2016-11-29 07:52:47 UTC], ["creator", "Ashley"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 23:52:47 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering visitors/home.html.erb within layouts/application
+  [1m[36mNotification Load (0.2ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications" INNER JOIN "users_notifications" ON "notifications"."id" = "users_notifications"."notification_id" WHERE "users_notifications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered collection of visitors/_notification.html.erb [0 times] (0.0ms)
+  [1m[36mThingsToDo Load (0.3ms)[0m  [1m[34mSELECT "things_to_dos".* FROM "things_to_dos" INNER JOIN "users_things_to_dos" ON "things_to_dos"."id" = "users_things_to_dos"."things_to_do_id" WHERE "users_things_to_dos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered visitors/_im_bored_form.html.erb (9.8ms)
+  Rendered visitors/home.html.erb within layouts/application (21.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (7.6ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_modal.html.erb (0.7ms)
+Completed 200 OK in 120ms (Views: 116.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/events" for ::1 at 2016-11-28 23:52:51 -0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 5]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 8]]
+  Rendered events/index.html.erb within layouts/application (39.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (2.5ms)
+  Rendered layouts/_navigation.html.erb (7.8ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_modal.html.erb (0.5ms)
+Completed 200 OK in 117ms (Views: 106.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/events/new" for ::1 at 2016-11-28 23:52:53 -0800
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (19.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (3.2ms)
+  Rendered layouts/_navigation.html.erb (8.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_modal.html.erb (0.4ms)
+Completed 200 OK in 97ms (Views: 93.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/events" for ::1 at 2016-11-28 23:53:04 -0800
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a7P8ZY7riJfgrkLe0+nplsdpiC3vqea/ak3Ne7ZCEX8yly5lLDThAxlAnmQKarD5ZOUozSkled5D6C72bOpWOw==", "event"=>{"name"=>"Birthday Party", "description"=>"", "month"=>"December", "day"=>"25", "year"=>"2016"}, "commit"=>"Create Event"}
+Unpermitted parameter: description
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "month", "day", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Birthday Party"], ["month", "December"], ["day", 25], ["year", 2016], ["created_at", 2016-11-29 07:53:04 UTC], ["updated_at", 2016-11-29 07:53:04 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.9ms)
+
+
+
+NameError - uninitialized constant EventsController::ExampleMailer:
+  app/controllers/events_controller.rb:18:in `create'
+  actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.0.0.1) lib/abstract_controller/base.rb:188:in `process_action'
+  actionpack (5.0.0.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.0.0.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.0.0.1) lib/active_support/callbacks.rb:126:in `call'
+  activesupport (5.0.0.1) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+  activesupport (5.0.0.1) lib/active_support/callbacks.rb:455:in `call'
+  activesupport (5.0.0.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+  activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+  activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.0.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.0.0.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.0.0.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.0.0.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (5.0.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.0.0.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (5.0.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.0.0.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+  activerecord (5.0.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (5.0.0.1) lib/abstract_controller/base.rb:126:in `process'
+  actionview (5.0.0.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.0.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+  actionpack (5.0.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+  actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+  actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+  actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+  actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+  actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+  actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+  warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.6) lib/warden/manager.rb:34:in `call'
+  rack (2.0.1) lib/rack/etag.rb:25:in `call'
+  rack (2.0.1) lib/rack/conditional_get.rb:38:in `call'
+  rack (2.0.1) lib/rack/head.rb:12:in `call'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+  actionpack (5.0.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.0.0.1) lib/active_record/migration.rb:552:in `call'
+  actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+  activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+  activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+  activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+  actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+  web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+  activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+  railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+  rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+  railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+  puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+  puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+  puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+
+Started POST "/__better_errors/66ac7f804dd1c8cc/variables" for ::1 at 2016-11-28 23:53:05 -0800
+Started POST "/events" for ::1 at 2016-11-28 23:53:51 -0800
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a7P8ZY7riJfgrkLe0+nplsdpiC3vqea/ak3Ne7ZCEX8yly5lLDThAxlAnmQKarD5ZOUozSkled5D6C72bOpWOw==", "event"=>{"name"=>"Birthday Party", "description"=>"", "month"=>"December", "day"=>"25", "year"=>"2016"}, "commit"=>"Create Event"}
+Unpermitted parameter: description
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "events" ("name", "month", "day", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Birthday Party"], ["month", "December"], ["day", 25], ["year", 2016], ["created_at", 2016-11-29 07:53:51 UTC], ["updated_at", 2016-11-29 07:53:51 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/events.1
+Completed 302 Found in 24ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/events.1" for ::1 at 2016-11-28 23:53:51 -0800
+Processing by EventsController#index as 
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 4]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 5]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 8]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 10]]
+  Rendered events/index.html.erb within layouts/application (20.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (1.7ms)
+  Rendered layouts/_navigation.html.erb (25.8ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_modal.html.erb (0.3ms)
+Completed 200 OK in 155ms (Views: 140.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 23:54:14 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering visitors/home.html.erb within layouts/application
+  [1m[36mNotification Load (0.1ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications" INNER JOIN "users_notifications" ON "notifications"."id" = "users_notifications"."notification_id" WHERE "users_notifications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered collection of visitors/_notification.html.erb [0 times] (0.0ms)
+  [1m[36mThingsToDo Load (0.1ms)[0m  [1m[34mSELECT "things_to_dos".* FROM "things_to_dos" INNER JOIN "users_things_to_dos" ON "things_to_dos"."id" = "users_things_to_dos"."things_to_do_id" WHERE "users_things_to_dos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered visitors/_im_bored_form.html.erb (29.9ms)
+  Rendered visitors/home.html.erb within layouts/application (43.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (4.3ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_modal.html.erb (0.6ms)
+Completed 200 OK in 102ms (Views: 99.0ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-11-28 23:54:15 -0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gsMg1u6+SPnLlFebmJ/i9vjzRBtDxsW0FX1fXJ9a+zbb5/LWTGEhbTJ6iyFBHLuZW3/k+4VKWtU82LzRRfK8cg=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 23:54:15 -0800
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (4.9ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+  Rendered layouts/_modal.html.erb (0.4ms)
+Completed 200 OK in 73ms (Views: 71.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-11-28 23:54:40 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (6.3ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_modal.html.erb (0.6ms)
+Completed 200 OK in 89ms (Views: 86.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-11-28 23:54:45 -0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ePOTolhNnKkpjFAru1i2F9vpf8Zr98ZjuKRr2Anhek3KRRh7dJYDmm8jktII++HIuisO0Omn6CHpGHeYS+jLyg==", "user"=>{"email"=>"ashleyhui@berkeley.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ashleyhui@berkeley.edu"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-11-29 07:54:45 UTC], ["last_sign_in_at", 2016-11-29 07:52:33 UTC], ["sign_in_count", 7], ["updated_at", 2016-11-29 07:54:45 UTC], ["id", 1]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 165ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 23:54:45 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering visitors/home.html.erb within layouts/application
+  [1m[36mNotification Load (0.1ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications" INNER JOIN "users_notifications" ON "notifications"."id" = "users_notifications"."notification_id" WHERE "users_notifications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered collection of visitors/_notification.html.erb [0 times] (0.0ms)
+  [1m[36mThingsToDo Load (0.1ms)[0m  [1m[34mSELECT "things_to_dos".* FROM "things_to_dos" INNER JOIN "users_things_to_dos" ON "things_to_dos"."id" = "users_things_to_dos"."things_to_do_id" WHERE "users_things_to_dos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered visitors/_im_bored_form.html.erb (11.2ms)
+  Rendered visitors/home.html.erb within layouts/application (18.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.7ms)
+  Rendered layouts/_navigation.html.erb (6.7ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+  Rendered layouts/_modal.html.erb (0.4ms)
+Completed 200 OK in 101ms (Views: 98.1ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/bored_create" for ::1 at 2016-11-28 23:54:54 -0800
+Processing by VisitorsController#bored_update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eFXBJkICQ0GESEIMS8Rw/RTVywwkKqhBnnDEJd0AW3Kcby335y3u9QiY/crVOS5KlkQY8aLNGrjs/M4xqqaMww==", "notification"=>{"description"=>"Drink"}, "group"=>{"groups"=>["", "2", "1"]}, "commit"=>"Send Status!"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "notifications" ("description", "created_at", "updated_at", "creator") VALUES (?, ?, ?, ?)[0m  [["description", "Drink"], ["created_at", 2016-11-29 07:54:54 UTC], ["updated_at", 2016-11-29 07:54:54 UTC], ["creator", "Ashley"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 2]]
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users_notifications" ("user_id", "notification_id") VALUES (?, ?)[0m  [["user_id", 1], ["notification_id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 67ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 23:54:54 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering visitors/home.html.erb within layouts/application
+  [1m[36mNotification Load (0.1ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications" INNER JOIN "users_notifications" ON "notifications"."id" = "users_notifications"."notification_id" WHERE "users_notifications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered collection of visitors/_notification.html.erb [1 times] (0.5ms)
+  [1m[36mThingsToDo Load (0.5ms)[0m  [1m[34mSELECT "things_to_dos".* FROM "things_to_dos" INNER JOIN "users_things_to_dos" ON "things_to_dos"."id" = "users_things_to_dos"."things_to_do_id" WHERE "users_things_to_dos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered visitors/_im_bored_form.html.erb (11.9ms)
+  Rendered visitors/home.html.erb within layouts/application (19.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (4.9ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+  Rendered layouts/_modal.html.erb (1.0ms)
+Completed 200 OK in 92ms (Views: 87.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/events" for ::1 at 2016-11-28 23:55:00 -0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 4]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 5]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 8]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 10]]
+  Rendered events/index.html.erb within layouts/application (31.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (1.5ms)
+  Rendered layouts/_navigation.html.erb (4.8ms)
+  Rendered layouts/_messages.html.erb (1.2ms)
+  Rendered layouts/_modal.html.erb (0.4ms)
+Completed 200 OK in 104ms (Views: 97.4ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/events/join?event_id=5" for ::1 at 2016-11-28 23:55:06 -0800
+Processing by EventsController#join as HTML
+  Parameters: {"authenticity_token"=>"wGfxw1JYZYPEGW5HUaOnV++DLWEyPTmyX9o592Vr1/wkXR0S93fIN0jJ0YHPXvngbRL+nLTai0stVjPjEs0ATQ==", "event_id"=>"5"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["event_id", 5], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users_events" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["event_id", 5], ["created_at", 2016-11-29 07:55:06 UTC], ["updated_at", 2016-11-29 07:55:06 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/events
+Completed 302 Found in 27ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/events" for ::1 at 2016-11-28 23:55:06 -0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 4]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 5]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 8]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 9]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 10]]
+  Rendered events/index.html.erb within layouts/application (24.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (2.9ms)
+  Rendered layouts/_navigation.html.erb (6.8ms)
+  Rendered layouts/_messages.html.erb (4.4ms)
+  Rendered layouts/_modal.html.erb (0.4ms)
+Completed 200 OK in 102ms (Views: 98.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/events/new" for ::1 at 2016-11-28 23:55:09 -0800
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (16.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (1.7ms)
+  Rendered layouts/_navigation.html.erb (5.8ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_modal.html.erb (0.7ms)
+Completed 200 OK in 110ms (Views: 107.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/events" for ::1 at 2016-11-28 23:55:23 -0800
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dBM1nwfMb8tYvlK4CyYlbflzLfS6WF0C/sMrBdUvZs+QKdlOouPCf9Ru7X6V23vae+L+CTy/7/uMTyERoomxfg==", "event"=>{"name"=>"Billiards", "description"=>"", "month"=>"March", "day"=>"5", "year"=>"2017"}, "commit"=>"Create Event"}
+Unpermitted parameter: description
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "events" ("name", "month", "day", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Billiards"], ["month", "March"], ["day", 5], ["year", 2017], ["created_at", 2016-11-29 07:55:23 UTC], ["updated_at", 2016-11-29 07:55:23 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/events.1
+Completed 302 Found in 11ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/events.1" for ::1 at 2016-11-28 23:55:23 -0800
+Processing by EventsController#index as 
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 4]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 5]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 8]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 9]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 10]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 11]]
+  Rendered events/index.html.erb within layouts/application (32.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (3.4ms)
+  Rendered layouts/_navigation.html.erb (30.5ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+  Rendered layouts/_modal.html.erb (0.5ms)
+Completed 200 OK in 205ms (Views: 184.9ms | ActiveRecord: 2.2ms)
+
+
+Started PATCH "/events/join?event_id=11" for ::1 at 2016-11-28 23:55:29 -0800
+Processing by EventsController#join as HTML
+  Parameters: {"authenticity_token"=>"F7Q4zAXc+1emN4TEu6fkNFnQfwQcmeypGkq2oc4KJx3zjtQdoPNW4yrnOwIlWrqD20Gs+Zp+XlBoxry1uazwrA==", "event_id"=>"11"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["event_id", 11], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users_events" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["event_id", 11], ["created_at", 2016-11-29 07:55:29 UTC], ["updated_at", 2016-11-29 07:55:29 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/events
+Completed 302 Found in 17ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/events" for ::1 at 2016-11-28 23:55:29 -0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 4]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 5]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 8]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 10]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_events" ON "users"."id" = "users_events"."user_id" WHERE "users_events"."event_id" = ?[0m  [["event_id", 11]]
+  Rendered events/index.html.erb within layouts/application (29.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (3.5ms)
+  Rendered layouts/_navigation.html.erb (14.6ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+  Rendered layouts/_modal.html.erb (0.4ms)
+Completed 200 OK in 117ms (Views: 112.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 23:55:33 -0800
+Processing by GroupsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["group_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendered groups/_group_button.html.erb (10.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["group_id", 1], ["LIMIT", 3]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["group_id", 2], ["id", 1], ["LIMIT", 1]]
+  Rendered groups/_group_button.html.erb (3.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["group_id", 2], ["LIMIT", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 2]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["group_id", 3], ["id", 1], ["LIMIT", 1]]
+  Rendered groups/_group_button.html.erb (6.0ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 3]]
+  Rendered collection of groups/_group.html.erb [3 times] (41.2ms)
+  Rendered groups/_group_modal.html.erb (0.6ms)
+  Rendered groups/_group_form_inner.html.erb (1.2ms)
+  Rendered groups/_group_form.html.erb (4.7ms)
+  Rendered groups/index.html.erb within layouts/application (55.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (4.7ms)
+  Rendered layouts/_messages.html.erb (1.4ms)
+  Rendered layouts/_modal.html.erb (0.6ms)
+Completed 200 OK in 143ms (Views: 133.6ms | ActiveRecord: 2.6ms)
+
+
+Started DELETE "/group_leave?id=1" for ::1 at 2016-11-28 23:55:38 -0800
+Processing by GroupsController#leave as HTML
+  Parameters: {"authenticity_token"=>"W3IpUk/rlpY/Ts9rjTqLmiVwjPCeN9Xfjrs/hoj92mC/SMWD6sQ7IrOecK0Tx9Utp+FfDRjQZyb8NzWS/1sN0Q==", "id"=>"1"}
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["group_id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users_groups" WHERE "users_groups"."group_id" = ? AND "users_groups"."user_id" = 1[0m  [["group_id", 1]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/groups
+Completed 302 Found in 17ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 23:55:38 -0800
+Processing by GroupsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["group_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendered groups/_group_button.html.erb (8.0ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["group_id", 2], ["id", 1], ["LIMIT", 1]]
+  Rendered groups/_group_button.html.erb (2.6ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["group_id", 2], ["LIMIT", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 2]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["group_id", 3], ["id", 1], ["LIMIT", 1]]
+  Rendered groups/_group_button.html.erb (2.3ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 3]]
+  Rendered collection of groups/_group.html.erb [3 times] (30.1ms)
+  Rendered groups/_group_modal.html.erb (0.4ms)
+  Rendered groups/_group_form_inner.html.erb (1.0ms)
+  Rendered groups/_group_form.html.erb (3.9ms)
+  Rendered groups/index.html.erb within layouts/application (40.7ms)
+  Rendered layouts/_navigation_links.html.erb (1.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (8.3ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_modal.html.erb (0.4ms)
+Completed 200 OK in 131ms (Views: 122.6ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/groups" for ::1 at 2016-11-28 23:55:48 -0800
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7VUyPqZcGDrYIQItGq+54oZNAG5G/1Yra7q3PApJv64Jb97vA3O1jlTxveuEUudVBNzTk8AY5NIZNr0ofe9oHw==", "group"=>{"name"=>"Drunk", "description"=>"Let's drink."}, "commit"=>"Create Group!"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "groups" ("name", "description", "created_at", "updated_at", "leader_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Drunk"], ["description", "Let's drink."], ["created_at", 2016-11-29 07:55:48 UTC], ["updated_at", 2016-11-29 07:55:48 UTC], ["leader_id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users_groups" ("user_id", "group_id") VALUES (?, ?)[0m  [["user_id", 1], ["group_id", 4]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/groups
+Completed 302 Found in 38ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 23:55:48 -0800
+Processing by GroupsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["group_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendered groups/_group_button.html.erb (3.6ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["group_id", 2], ["id", 1], ["LIMIT", 1]]
+  Rendered groups/_group_button.html.erb (5.2ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["group_id", 2], ["LIMIT", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 2]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["group_id", 3], ["id", 1], ["LIMIT", 1]]
+  Rendered groups/_group_button.html.erb (3.3ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 3]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["group_id", 4], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered groups/_group_button.html.erb (5.2ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 4]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["group_id", 4], ["LIMIT", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 4]]
+  Rendered collection of groups/_group.html.erb [4 times] (35.7ms)
+  Rendered groups/_group_modal.html.erb (0.7ms)
+  Rendered groups/_group_form_inner.html.erb (1.7ms)
+  Rendered groups/_group_form.html.erb (6.7ms)
+  Rendered groups/index.html.erb within layouts/application (50.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (4.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_modal.html.erb (0.6ms)
+Completed 200 OK in 135ms (Views: 127.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/things_to_dos" for ::1 at 2016-11-28 23:55:56 -0800
+Processing by ThingsToDosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering things_to_dos/index.html.erb within layouts/application
+  [1m[36mThingsToDo Load (0.4ms)[0m  [1m[34mSELECT "things_to_dos".* FROM "things_to_dos" INNER JOIN "users_things_to_dos" ON "things_to_dos"."id" = "users_things_to_dos"."things_to_do_id" WHERE "users_things_to_dos"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered things_to_dos/index.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (5.8ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+  Rendered layouts/_modal.html.erb (0.4ms)
+Completed 200 OK in 86ms (Views: 77.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/things_to_dos" for ::1 at 2016-11-28 23:56:04 -0800
+Processing by ThingsToDosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aR+QIycDhHGJYXuuqg8N8v72s4u7ZGGXouTNqEQT6JGNJXzygiwpxQWxxGg08lNFfGdgdj2D027QaMe8M7U/IA==", "things_to_do"=>{"name"=>"Study"}, "commit"=>"Create Things to do"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "things_to_dos" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Study"], ["created_at", 2016-11-29 07:56:04 UTC], ["updated_at", 2016-11-29 07:56:04 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users_things_to_dos" ("user_id", "things_to_do_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["things_to_do_id", 7], ["created_at", 2016-11-29 07:56:04 UTC], ["updated_at", 2016-11-29 07:56:04 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/things_to_dos.1
+Completed 302 Found in 31ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/things_to_dos.1" for ::1 at 2016-11-28 23:56:04 -0800
+Processing by ThingsToDosController#index as 
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering things_to_dos/index.html.erb within layouts/application
+  [1m[36mThingsToDo Load (0.1ms)[0m  [1m[34mSELECT "things_to_dos".* FROM "things_to_dos" INNER JOIN "users_things_to_dos" ON "things_to_dos"."id" = "users_things_to_dos"."things_to_do_id" WHERE "users_things_to_dos"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered things_to_dos/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.9ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (28.4ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_modal.html.erb (0.4ms)
+Completed 200 OK in 172ms (Views: 155.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 23:56:07 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering visitors/home.html.erb within layouts/application
+  [1m[36mNotification Load (0.1ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications" INNER JOIN "users_notifications" ON "notifications"."id" = "users_notifications"."notification_id" WHERE "users_notifications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered collection of visitors/_notification.html.erb [1 times] (0.5ms)
+  [1m[36mThingsToDo Load (0.2ms)[0m  [1m[34mSELECT "things_to_dos".* FROM "things_to_dos" INNER JOIN "users_things_to_dos" ON "things_to_dos"."id" = "users_things_to_dos"."things_to_do_id" WHERE "users_things_to_dos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered visitors/_im_bored_form.html.erb (12.1ms)
+  Rendered visitors/home.html.erb within layouts/application (20.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (5.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_modal.html.erb (0.9ms)
+Completed 200 OK in 105ms (Views: 101.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/bored_create" for ::1 at 2016-11-28 23:56:12 -0800
+Processing by VisitorsController#bored_update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6wts9BUp6jLqBUjpYo5tg1jwimjN5bDej8gtWgElmoYPMYAlsAZHhmbV9y/8czM02mFZlUsCAif9RCdOdoNNNw==", "notification"=>{"description"=>"Study"}, "group"=>{"groups"=>["", "2", "4"]}, "commit"=>"Send Status!"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "notifications" ("description", "created_at", "updated_at", "creator") VALUES (?, ?, ?, ?)[0m  [["description", "Study"], ["created_at", 2016-11-29 07:56:12 UTC], ["updated_at", 2016-11-29 07:56:12 UTC], ["creator", "Ashley"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 2]]
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_groups" ON "users"."id" = "users_groups"."user_id" WHERE "users_groups"."group_id" = ?[0m  [["group_id", 4]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users_notifications" ("user_id", "notification_id") VALUES (?, ?)[0m  [["user_id", 1], ["notification_id", 3]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 37ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 23:56:12 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering visitors/home.html.erb within layouts/application
+  [1m[36mNotification Load (0.1ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications" INNER JOIN "users_notifications" ON "notifications"."id" = "users_notifications"."notification_id" WHERE "users_notifications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered collection of visitors/_notification.html.erb [2 times] (0.7ms)
+  [1m[36mThingsToDo Load (0.2ms)[0m  [1m[34mSELECT "things_to_dos".* FROM "things_to_dos" INNER JOIN "users_things_to_dos" ON "things_to_dos"."id" = "users_things_to_dos"."things_to_do_id" WHERE "users_things_to_dos"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "users_groups" ON "groups"."id" = "users_groups"."group_id" WHERE "users_groups"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered visitors/_im_bored_form.html.erb (13.3ms)
+  Rendered visitors/home.html.erb within layouts/application (25.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (6.5ms)
+  Rendered layouts/_messages.html.erb (1.3ms)
+  Rendered layouts/_modal.html.erb (0.6ms)
+Completed 200 OK in 121ms (Views: 116.4ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-11-28 23:56:20 -0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eRHutJqbo3iBqQTdDC45xBCJjQXhiT+iUt2oS6a0BP6dKwJlP7QOzA15uxuS02dzkhhe+GdujVsgUaJf0RLTTw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 23:56:20 -0800
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navigation_links.html.erb (1.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.7ms)
+  Rendered layouts/_navigation.html.erb (6.9ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+  Rendered layouts/_modal.html.erb (0.5ms)
+Completed 200 OK in 79ms (Views: 77.7ms | ActiveRecord: 0.0ms)
+
+
